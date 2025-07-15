@@ -17,6 +17,10 @@ console.log(fourthTeacher);
 // 2. Sostituisci il quinto insegnante nell'array teachers con 'Patrick'
 teachers.splice(4, 1, "Patrick");
 console.log(teachers);
+// altro metodo MIGLIORE
+/*
+teachers[4] = "Patrick"
+*/
 
 // 3. Rimuovi l'ultimo insegnante dall'array e salvalo nella variabile lastTeacher qui sotto
 const lastTeacher = teachers.pop();
@@ -43,5 +47,12 @@ console.log(lewisIndex);
 
 // 8. Verifica se l'array teachers è vuoto
 // e salva il risultato nella variabile isTeachersEmpty
-const isTeachersEmpty = teachers.length;
+//ERRORE -> QUESTI LOG PER CAPIRE LE LUNGHEZZE DI UN ARRAY PIENO O VUOTO
+console.log(teachers);
+console.log([]);
+console.log(teachers.length);
+console.log([].length);
+
+//CORREZIONE
+const isTeachersEmpty = teachers.length === 0;
 console.log(isTeachersEmpty);
